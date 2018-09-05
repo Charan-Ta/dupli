@@ -1,0 +1,27 @@
+{
+    "subCategories": [
+    {
+        "name": "AppleID",
+        "label": "Apple ID"
+    },
+    {
+        "name": "City",
+        "label": "City"
+    },
+    {
+        "name": "ContractID",
+        "label": "Contract ID"
+    },
+    {
+        "name": "Country",
+        "label": "Country"
+    },
+    {
+        "name": "StoreName",
+        "label": "Store Name"
+    },
+    {
+        "name": "District",
+        "label": "District"
+    }]
+}

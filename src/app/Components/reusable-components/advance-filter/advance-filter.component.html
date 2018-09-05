@@ -1,0 +1,8 @@
+<div class="filter">
+  <fa-icon style="margin-right: 5px; color: #BDBDBD; font-size: 18px;" [icon]="faFilter"></fa-icon>
+  <ul class="tag-list" #tag_adv_list></ul>
+  <input type="text" class="search-box" (focus)="showSuggestions($event,categories)" (input)="showSuggestions($event,categories)" placeholder={{placeholder}} #main_adv_input>
+  <ul class="suggestion-box" id="suggestion_box" [style.left.px]="rect?.left"  (mouseover)="stopTimer()" (mouseout)="startTimer()" #suggestion_adv_box>
+    <li *ngFor="let suggestion of autosuggest" (click)="createTag($event)" (keydown)="selectKey($event)">{{suggestion}}</li>
+  </ul>
+</div>

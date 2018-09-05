@@ -1,24 +1,17 @@
-export const FilterConfig = [
-  {
-    name: 'AppleID',
-    label: 'Apple ID'
-  }, {
-    name: 'City',
-    label: 'City'
-  }, {
-    name: 'ContractID',
-    label: 'Contract ID'
-  }, {
-    name: 'Country',
-    label: 'Country'
-  }, {
-    name: 'StoreName',
-    label: 'Store Name',
-  }, {
-    name: 'District',
-    label: 'District'
-  }
-];
+export const AdvanceFilterConfig = {
+  categories:[{
+    name:'BaseLine Information',
+    label:'BaseLine Information'
+    },
+    {
+      name:'Program Details',
+      label:'Program Details'
+    },
+    {
+      name:'Fixture Details',
+      label:'Fixture Details'
+    }]
+};
 
 
 export const AllStoresTableConfig = {
@@ -32,52 +25,49 @@ export const AllStoresTableConfig = {
   sort: true, // (optional)
   isFiltered: false, // (optional)
   filter: null, // (optional)
-  // columnNames: [{
-  //   name: 'AppleID',
-  //   label: 'Apple ID'
-  // }, {
-  //   name: 'City',
-  //   label: 'City'
-  // }, {
-  //   name: 'ContractID',
-  //   label: 'Contract ID'
-  // }, {
-  //   name: 'Country',
-  //   label: 'Country'
-  // }, {
-  //   name: 'StoreName',
-  //   label: 'Store Name'
-  // }, {
-  //   name: 'District',
-  //   label: 'District'
-  // }],// (mandatory)
-  // availableFields: [{
-  //   name: 'AppleID',
-  //   label: 'Apple ID'
-  // }, {
-  //   name: 'City',
-  //   label: 'City'
-  // }, {
-  //   name: 'ContractID',
-  //   label: 'Contract ID'
-  // }, {
-  //   name: 'Country',
-  //   label: 'Country'
-  // }, {
-  //   name: 'StoreName',
-  //   label: 'Store Name'
-  // }, {
-  //   name: 'District',
-  //   label: 'District'
-  // }, {
+  columnNames: [{
+    name: 'AppleID',
+    label: 'Apple ID'
+  }, {
+    name: 'City',
+    label: 'City'
+  }, {
+    name: 'ContractID',
+    label: 'Contract ID'
+  }, {
+    name: 'Country',
+    label: 'Country'
+  }, {
+    name: 'StoreName',
+    label: 'Store Name'
+  }, {
+    name: 'District',
+    label: 'District'
+  }],// (mandatory)
+  availableFields: [{
+    name: 'AppleID',
+    label: 'Apple ID'
+  }, {
+    name: 'City',
+    label: 'City'
+  }, {
+    name: 'ContractID',
+    label: 'Contract ID'
+  }, {
+    name: 'Country',
+    label: 'Country'
+  }, {
+    name: 'StoreName',
+    label: 'Store Name'
+  }, {
+    name: 'District',
+    label: 'District'
+  }, {
 
-  // }]
-
-
+  }]
 };
 
-export const BaseLineInformation = {
-  columnNames: [{
+export const BaseLineInformation = [{
     name: 'StoreName',
     label: "Store Name"
   }, {
@@ -114,8 +104,7 @@ export const BaseLineInformation = {
     name: "District",
     label: "District"
   }
-  ]
-};
+  ];
 
 export const ProgramDetails = {
   columnNames: [{

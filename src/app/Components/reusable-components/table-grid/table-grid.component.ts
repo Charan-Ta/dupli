@@ -1,4 +1,4 @@
-import { Component, OnInit, OnChanges, SimpleChange, Input, Renderer, ReflectiveInjector } from '@angular/core';
+import { Component, OnInit, OnChanges, SimpleChange, Input, Renderer, ReflectiveInjector,EventEmitter, Output } from '@angular/core';
 import { faSort, faCaretDown, faCaretUp } from '@fortawesome/free-solid-svg-icons';
 import { Collection } from '../../../Interfaces/collection';
 
@@ -9,7 +9,7 @@ declare var $: any;
   styleUrls: ['./table-grid.component.css']
 })
 export class TableGridComponent implements OnInit, OnChanges {
-  @ViewChild(PopupWindowComponent) popup1: PopupWindowComponent;
+  //@ViewChild(PopupWindowComponent) popup1: PopupWindowComponent;
   @Output('fieldsDisplayed') fieldsDisplayed: EventEmitter<string[]> = new EventEmitter<string[]>();
   public fields;
   @Input('collection') collectionClass;
@@ -37,7 +37,6 @@ export class TableGridComponent implements OnInit, OnChanges {
   }
 
   ngOnInit() {
-    this.storedFields = this.tableConfig.columnNames;
     if (localStorage.getItem('columnWidth')) {
       this.columnWidth = localStorage.getItem('columnWidth').split(",");
     }
@@ -86,6 +85,7 @@ export class TableGridComponent implements OnInit, OnChanges {
       this.tableConfig.sort = true;// boolean
     if (this.tableConfig.isFiltered)
       this.filterData();
+    this.storedFields = this.tableConfig.columnNames;
     this.setInitialColumnWidth();
   }
 
@@ -181,13 +181,13 @@ export class TableGridComponent implements OnInit, OnChanges {
   }
 
   // Method to execute the popup 
-  popup() {
-    this.toogle_pop_comp = true;
-    if (this.count > 0) {
-      this.popup1.open();
-    }
-    this.count = 1;
-  }
+  // popup() {
+  //   this.toogle_pop_comp = true;
+  //   if (this.count > 0) {
+  //     this.popup1.open();
+  //   }
+  //   this.count = 1;
+  // }
 
   masterArrayHandler($event: any) {
 
